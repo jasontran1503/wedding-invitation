@@ -3,23 +3,42 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="./css/7681f709cd4594fb.css"
-      data-precedence="next"
-    />
-    <link
-      rel="stylesheet"
-      href="./css/08070f547891538d.css"
-      data-precedence="next"
-    />
-    <link
-      rel="stylesheet"
-      href="./css/08fc569d88870472.css"
-      data-precedence="next"
-    />
     <link rel="stylesheet" href="./fonts/font-face.css" />
-    <link rel="icon" type="image/png" href="./icon.png">
+    <link rel="icon" type="image/png" href="./icon.png" />
+    <style>
+      :root {
+        --accent: rgb(93, 106, 87);
+        --muted: rgb(105, 122, 98);
+        --bg-accent: rgb(189, 205, 193);
+      }
+
+      .serif {
+        font-family: Baskerville, "Times New Roman", serif;
+      }
+
+      .accent {
+        color: var(--accent);
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+
+      .kicker {
+        letter-spacing: 0.05em;
+      }
+
+      .bg-accent {
+        background-color: rgba(189, 205, 193, 0.2);
+        border: 1px solid var(--bg-accent);
+      }
+
+      .pill {
+        background-color: var(--bg-accent);
+        color: var(--muted);
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
 
   <body class="__variable_0e81cb __variable_3fd7ce font-sans">
@@ -80,18 +99,14 @@
                   <div
                     class="relative z-10 flex flex-col items-center gap-6 px-6 md:px-10"
                   >
-                    <div
-                      class="font-uni-chu text-[50px] md:text-[70px]"
-                      style="color: rgb(93, 106, 87)"
-                    >
+                    <div class="font-uni-chu text-[50px] md:text-[70px] accent">
                       <div
                         class="font-uni-chu text-[50px] md:text-[70px] leading-[75px] md:leading-[105px]"
                       >
                         Xuân Sơn
                       </div>
                       <div
-                        class="mt-1 text-[37px] md:text-[50px] leading-[56px] md:leading-[75px]"
-                        style="color: rgb(93, 106, 87)"
+                        class="mt-1 text-[37px] md:text-[50px] leading-[56px] md:leading-[75px] accent"
                       >
                         &amp;
                       </div>
@@ -103,123 +118,23 @@
                     </div>
                   </div>
                 </header>
+
+                <br />
+                <br />
+
                 <section
-                  class="relative flex flex-col items-center px-6 md:px-10 pb-12 md:pb-16 md:mt-8 z-10"
-                >
-                  <h2
-                    class="uppercase font-normal text-[20px] md:text-[26px]"
-                    style="
-                      color: rgb(93, 106, 87);
-                      font-family:
-                        Baskerville, &quot;Times New Roman&quot;, serif;
-                      letter-spacing: 0.05em;
-                    "
-                  >
-                    ALBUM ẢNH CƯỚI
-                  </h2>
-                  <div class="mt-6 w-full max-w-[432px] md:max-w-[600px]">
-                    <div class="grid grid-cols-2 gap-3 md:gap-4">
-                      <div
-                        class="group relative aspect-square cursor-pointer overflow-hidden rounded-xl border bg-[#bdcdc1]/20"
-                        style="border-color: rgb(189, 205, 193)"
-                      >
-                        <img
-                          alt="Ảnh cưới 1"
-                          class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03]"
-                          src="./images/MIA08481.JPG"
-                          style="object-position: 50% 50%"
-                        />
-                      </div>
-                      <div
-                        class="group relative aspect-square cursor-pointer overflow-hidden rounded-xl border bg-[#bdcdc1]/20"
-                        style="border-color: rgb(189, 205, 193)"
-                      >
-                        <img
-                          alt="Ảnh cưới 2"
-                          class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03]"
-                          src="./images/MIA09727.JPG"
-                          style="object-position: 50% 50%"
-                        />
-                      </div>
-                      <div
-                        class="group relative aspect-square cursor-pointer overflow-hidden rounded-xl border bg-[#bdcdc1]/20"
-                        style="border-color: rgb(189, 205, 193)"
-                      >
-                        <img
-                          alt="Ảnh cưới 3"
-                          class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03]"
-                          src="./images/MIA09293.JPG"
-                          style="object-position: 50% 50%"
-                        />
-                      </div>
-                      <div
-                        class="group relative aspect-square cursor-pointer overflow-hidden rounded-xl border bg-[#bdcdc1]/20"
-                        style="border-color: rgb(189, 205, 193)"
-                      >
-                        <img
-                          alt="Ảnh cưới 4"
-                          class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03]"
-                          src="./images/MIA09229.JPG"
-                          style="object-position: 50% 50%"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </section>
+                  class="relative flex flex-col gap-16 md:gap-20 px-3 md:px-6 pb-24 md:pb-32 z-10"
+                ></section>
+
                 <section
                   class="relative flex flex-col gap-16 md:gap-20 px-3 md:px-6 pb-24 md:pb-32 z-10"
                 >
                   <div
-                    class="relative grid grid-cols-2 gap-2 md:gap-3 text-center font-serif text-[14px] md:text-[18px] tracking-[0.05em]"
+                    class="relative text-center font-serif text-[14px] md:text-[18px] serif accent"
                   >
-                    <div class="flex flex-col gap-1.5">
-                      <span style="color: rgb(105, 122, 98)">Ông Bà</span>
-                      <span
-                        class="whitespace-pre-line text-[13px] md:text-[23px]"
-                        style="
-                          color: rgb(105, 122, 98);
-                          font-family:
-                            Baskerville, &quot;Times New Roman&quot;, serif;
-                        "
-                        >Trần Văn Lâm</span
-                      >
-                      <span
-                        class="whitespace-pre-line text-[13px] md:text-[23px]"
-                        style="
-                          color: rgb(105, 122, 98);
-                          font-family:
-                            Baskerville, &quot;Times New Roman&quot;, serif;
-                        "
-                        >Nguyễn Thị Thanh Xuân</span
-                      >
-                    </div>
-                    <div class="flex flex-col gap-1.5">
-                      <span style="color: rgb(105, 122, 98)">Ông Bà</span>
-                      <span
-                        class="whitespace-pre-line text-[13px] md:text-[23px]"
-                        style="
-                          color: rgb(105, 122, 98);
-                          font-family:
-                            Baskerville, &quot;Times New Roman&quot;, serif;
-                        "
-                        >Hồng</span
-                      >
-                      <span
-                        class="whitespace-pre-line text-[13px] md:text-[23px]"
-                        style="
-                          color: rgb(105, 122, 98);
-                          font-family:
-                            Baskerville, &quot;Times New Roman&quot;, serif;
-                        "
-                        >Nghiệp</span
-                      >
-                    </div>
-                  </div>
-                  <div
-                    class="relative text-center font-serif text-[14px] md:text-[18px]"
-                    style="color: rgb(93, 106, 87); white-space: pre-line"
-                  >
-                    TRÂN TRỌNG BÁO TIN LỄ THÀNH HÔN CỦA CON CHÚNG TÔI
+                    <span>TRÂN TRỌNG KÍNH MỜI</span>
+                    <hr class="my-4" />
+                    <span>tới dự LỄ THÀNH HÔN cùng gia đình chúng tôi</span>
                   </div>
                   <div
                     class="relative flex flex-col items-center text-center gap-3 md:gap-4"
@@ -258,6 +173,64 @@
                           Baskerville, &quot;Times New Roman&quot;, serif;
                       "
                     ></div>
+                  </div>
+                  <div
+                    class="relative grid grid-cols-2 gap-2 md:gap-3 text-center font-serif text-[14px] md:text-[18px] tracking-[0.05em]"
+                  >
+                    <div class="flex flex-col gap-1.5">
+                      <span style="color: rgb(105, 122, 98)">Nhà trai</span>
+                      <span
+                        class="whitespace-pre-line"
+                        style="
+                          color: rgb(105, 122, 98);
+                          font-family:
+                            Baskerville, &quot;Times New Roman&quot;, serif;
+                        "
+                        ><span class="text-[10px] md:text-[20px]">Ông</span
+                        >&nbsp;<span class="text-[11px] md:text-[23px]"
+                          >Trần Văn Lâm</span
+                        ></span
+                      >
+                      <span
+                        class="whitespace-pre-line"
+                        style="
+                          color: rgb(105, 122, 98);
+                          font-family:
+                            Baskerville, &quot;Times New Roman&quot;, serif;
+                        "
+                        ><span class="text-[10px] md:text-[20px]">Bà</span
+                        >&nbsp;<span class="text-[11px] md:text-[23px]"
+                          >Nguyễn Thị Thanh Xuân</span
+                        ></span
+                      >
+                    </div>
+                    <div class="flex flex-col gap-1.5">
+                      <span style="color: rgb(105, 122, 98)">Nhà gái</span>
+                      <span
+                        class="whitespace-pre-line"
+                        style="
+                          color: rgb(105, 122, 98);
+                          font-family:
+                            Baskerville, &quot;Times New Roman&quot;, serif;
+                        "
+                        ><span class="text-[10px] md:text-[20px]">Ông</span
+                        >&nbsp;<span class="text-[11px] md:text-[23px]"
+                          >Hồng</span
+                        ></span
+                      >
+                      <span
+                        class="whitespace-pre-line"
+                        style="
+                          color: rgb(105, 122, 98);
+                          font-family:
+                            Baskerville, &quot;Times New Roman&quot;, serif;
+                        "
+                        ><span class="text-[10px] md:text-[20px]">Bà</span
+                        >&nbsp;<span class="text-[11px] md:text-[23px]"
+                          >Nghiệp</span
+                        ></span
+                      >
+                    </div>
                   </div>
                   <div
                     class="relative flex flex-col items-center gap-4 md:gap-5 text-center"
@@ -335,59 +308,18 @@
                       2026
                     </div>
                     <div
-                      class="text-xs md:text-base uppercase tracking-[0.25em]"
+                      class="text-xs md:text-base uppercase"
                       style="
                         color: rgb(105, 122, 98);
                         font-family:
                           Baskerville, &quot;Times New Roman&quot;, serif;
                       "
                     >
-                      (Tức ngày 04/02 Bính Ngọ)
-                    </div>
-                    <div class="flex items-center justify-center gap-8 mt-4">
-                      <div class="flex flex-col items-center">
-                        <span
-                          class="text-xs uppercase tracking-wider"
-                          style="
-                            color: rgb(105, 122, 98);
-                            font-family:
-                              Baskerville, &quot;Times New Roman&quot;, serif;
-                          "
-                          >Đón khách</span
-                        >
-                        <span
-                          class="text-lg md:text-xl font-medium mt-1"
-                          style="
-                            color: rgb(93, 106, 87);
-                            font-family:
-                              Baskerville, &quot;Times New Roman&quot;, serif;
-                          "
-                          >10:00</span
-                        >
-                      </div>
-                      <div class="flex flex-col items-center">
-                        <span
-                          class="text-xs uppercase tracking-wider"
-                          style="
-                            color: rgb(105, 122, 98);
-                            font-family:
-                              Baskerville, &quot;Times New Roman&quot;, serif;
-                          "
-                          >Khai tiệc</span
-                        >
-                        <span
-                          class="text-lg md:text-xl font-medium mt-1"
-                          style="
-                            color: rgb(93, 106, 87);
-                            font-family:
-                              Baskerville, &quot;Times New Roman&quot;, serif;
-                          "
-                          >10:00</span
-                        >
-                      </div>
+                      (Tức ngày 04 tháng 02 năm Bính Ngọ)
                     </div>
                   </div>
                 </section>
+
                 <section
                   class="relative flex flex-col gap-6 md:gap-8 px-6 md:px-10 pb-12 md:pb-16"
                 >
@@ -401,7 +333,7 @@
                         letter-spacing: 0.05em;
                       "
                     >
-                      TIỆC CƯỚI SẼ TỔ CHỨC TẠI
+                      TIỆC CƯỚI TỔ CHỨC TẠI
                     </h3>
                     <h5
                       class="font-normal text-[15px] md:text-[15px] mt-4"
@@ -449,15 +381,96 @@
                     </div>
                   </div>
                 </section>
+
+                <section
+                  class="relative flex flex-col items-center px-6 md:px-10 pb-12 md:pb-16 md:mt-8 z-10"
+                >
+                  <h2
+                    class="uppercase font-normal text-[20px] md:text-[26px] kicker serif accent"
+                  >
+                    ALBUM ẢNH CƯỚI
+                  </h2>
+                  <div class="mt-6 w-full max-w-[432px] md:max-w-[600px]">
+                    <div class="grid grid-cols-3 gap-3 md:gap-4 mb-3">
+                      <div
+                        class="group relative aspect-square cursor-pointer overflow-hidden rounded-xl border bg-[#bdcdc1]/20"
+                        style="border-color: rgb(189, 205, 193)"
+                      >
+                        <img
+                          alt="Ảnh cưới 1"
+                          class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03]"
+                          src="./images/MIA09798.JPG"
+                          style="object-position: 50% 50%"
+                        />
+                      </div>
+                      <div
+                        class="group relative aspect-square cursor-pointer overflow-hidden rounded-xl border bg-[#bdcdc1]/20"
+                        style="border-color: rgb(189, 205, 193)"
+                      >
+                        <img
+                          alt="Ảnh cưới 2"
+                          class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03]"
+                          src="./images/MIA09293.JPG"
+                          style="object-position: 50% 50%"
+                        />
+                      </div>
+                      <div
+                        class="group relative aspect-square cursor-pointer overflow-hidden rounded-xl border bg-[#bdcdc1]/20"
+                        style="border-color: rgb(189, 205, 193)"
+                      >
+                        <img
+                          alt="Ảnh cưới 3"
+                          class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03]"
+                          src="./images/MIA00075.JPG"
+                          style="object-position: 50% 50%"
+                        />
+                      </div>
+                    </div>
+                    <div class="grid grid-cols-1 gap-3 md:gap-4 mb-3">
+                      <div
+                        class="group relative cursor-pointer overflow-hidden rounded-xl border bg-[#bdcdc1]/20"
+                        style="border-color: rgb(189, 205, 193)"
+                      >
+                        <img
+                          alt="Ảnh cưới 4"
+                          class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03]"
+                          src="./images/MIA08581.JPG"
+                          style="object-position: 50% 50%"
+                        />
+                      </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3 md:gap-4">
+                      <div
+                        class="group relative aspect-square cursor-pointer overflow-hidden rounded-xl border bg-[#bdcdc1]/20"
+                        style="border-color: rgb(189, 205, 193)"
+                      >
+                        <img
+                          alt="Ảnh cưới 5"
+                          class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03]"
+                          src="./images/MIA09229.JPG"
+                          style="object-position: 50% 50%"
+                        />
+                      </div>
+                      <div
+                        class="group relative aspect-square cursor-pointer overflow-hidden rounded-xl border bg-[#bdcdc1]/20"
+                        style="border-color: rgb(189, 205, 193)"
+                      >
+                        <img
+                          alt="Ảnh cưới 6"
+                          class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03]"
+                          src="./images/MIA08784.JPG"
+                          style="object-position: 50% 50%"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                
                 <footer
                   class="relative mt-6 md:mt-8 flex flex-col items-center gap-3 px-6 md:px-10 pt-6 md:pt-8 pb-3 text-center z-10"
                 >
                   <div
-                    class="rounded-2xl px-6 md:px-8 py-4 md:py-5 shadow-sm max-w-full md:max-w-[600px]"
-                    style="
-                      background-color: rgba(189, 205, 193, 0.2);
-                      border: 1px solid rgb(189, 205, 193);
-                    "
+                    class="rounded-2xl px-6 md:px-8 py-4 md:py-5 shadow-sm max-w-full md:max-w-[600px] bg-accent"
                   >
                     <span
                       class="text-sm md:text-lg leading-relaxed"
@@ -466,8 +479,7 @@
                         font-family:
                           Baskerville, &quot;Times New Roman&quot;, serif;
                       "
-                      >Sự hiện diện của quý khách là niềm vinh hạnh của gia đình
-                      chúng tôi!</span
+                      >Rất hân hạnh được đón tiếp!</span
                     >
                   </div>
                 </footer>
