@@ -5649,7 +5649,7 @@
     aspect-ratio: 9/16;
   }
   .aspect-square {
-    aspect-ratio: 0;
+    aspect-ratio: 1;
   }
   .aspect-video {
     aspect-ratio: var(--aspect-video);
