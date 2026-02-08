@@ -4,15 +4,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="./icon.png" />
-    <link rel="preload" href="./fonts/font-face.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link
+      rel="preload"
+      href="./fonts/font-face.css"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
     <noscript>
-      <link rel="stylesheet" href="./fonts/font-face.css">
+      <link rel="stylesheet" href="./fonts/font-face.css" />
     </noscript>
-    <link rel="preload" as="image" href="./images/MIA00075.JPG">
-    <link rel="preload" as="image" href="./images/MIA08581.JPG">
-    <link rel="preload" as="image" href="./images/MIA08784.JPG">
-    <link rel="preload" as="image" href="./images/MIA09343.JPG">
-    <link rel="preload" as="image" href="./images/MIA09798.JPG">
+    <link rel="preload" as="image" href="./images/MIA00075.JPG" />
+    <link rel="preload" as="image" href="./images/MIA08581.JPG" />
+    <link rel="preload" as="image" href="./images/MIA08784.JPG" />
+    <link rel="preload" as="image" href="./images/MIA09343.JPG" />
+    <link rel="preload" as="image" href="./images/MIA09798.JPG" />
     <link rel="stylesheet" href="./fonts/font-face.css" />
     <style>
       :root {
@@ -145,43 +153,29 @@
                     <hr class="my-4" />
                     <span>tới dự LỄ THÀNH HÔN cùng gia đình chúng tôi</span>
                   </div>
-                  <div
-                    class="relative flex flex-col items-center text-center gap-3 md:gap-4"
-                  >
-                    <h3
-                      class="font-uni-chu w-[80%] min-h-[80px] flex items-center justify-center leading-[50px] md:leading-[100px]"
-                      style="font-size: 48px; color: rgb(93, 106, 87)"
-                    >
-                      Xuân Sơn
-                    </h3>
+                  <div class="grid grid-cols-2 gap-3 md:gap-4">
                     <div
-                      class="text-xs uppercase tracking-[0.2em]"
-                      style="
-                        color: rgb(105, 122, 98);
-                        font-family:
-                          Baskerville, &quot;Times New Roman&quot;, serif;
-                      "
-                    ></div>
-                    <div
-                      class="font-uni-chu text-[35px] md:text-[48px]"
-                      style="color: rgb(93, 106, 87)"
+                      class="group relative cursor-pointer overflow-hidden rounded-xl border bg-[#bdcdc1]/20"
+                      style="border-color: rgb(189, 205, 193)"
                     >
-                      &amp;
+                      <img
+                        alt="Ảnh chú rể"
+                        class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03]"
+                        src="./images/MIA08867.JPG"
+                        style="object-position: 50% 50%"
+                      />
                     </div>
-                    <h3
-                      class="font-uni-chu w-[80%] min-h-[80px] flex items-center justify-center leading-[50px] md:leading-[100px]"
-                      style="font-size: 48px; color: rgb(93, 106, 87)"
-                    >
-                      Nguyễn Hậu
-                    </h3>
                     <div
-                      class="text-xs uppercase tracking-[0.2em]"
-                      style="
-                        color: rgb(105, 122, 98);
-                        font-family:
-                          Baskerville, &quot;Times New Roman&quot;, serif;
-                      "
-                    ></div>
+                      class="group relative cursor-pointer overflow-hidden rounded-xl border bg-[#bdcdc1]/20"
+                      style="border-color: rgb(189, 205, 193)"
+                    >
+                      <img
+                        alt="Ảnh cô dâu"
+                        class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03]"
+                        src="./images/MIA08265.JPG"
+                        style="object-position: 50% 50%"
+                      />
+                    </div>
                   </div>
                   <div
                     class="relative grid grid-cols-2 gap-2 md:gap-3 text-center font-serif text-[14px] md:text-[18px] tracking-[0.05em]"
@@ -212,6 +206,22 @@
                           >Nguyễn Thị Thanh Xuân</span
                         ></span
                       >
+                      <span
+                        class="whitespace-pre-line"
+                        style="
+                          color: rgb(105, 122, 98);
+                          font-family:
+                            Baskerville, &quot;Times New Roman&quot;, serif;
+                        "
+                      >
+                        <span class="text-[10px] md:text-[20px]">Chú rể</span
+                        >&nbsp;<span
+                          class="font-uni-chu text-[19px] md:text-[42px]"
+                          style="color: rgb(93, 106, 87)"
+                        >
+                          Trần Xuân Sơn
+                        </span>
+                      </span>
                     </div>
                     <div class="flex flex-col gap-1.5">
                       <span style="color: rgb(105, 122, 98)">Nhà gái</span>
@@ -239,6 +249,22 @@
                           >Nghiệp</span
                         ></span
                       >
+                      <span
+                        class="whitespace-pre-line"
+                        style="
+                          color: rgb(105, 122, 98);
+                          font-family:
+                            Baskerville, &quot;Times New Roman&quot;, serif;
+                        "
+                      >
+                        <span class="text-[10px] md:text-[20px]">Cô dâu</span
+                        >&nbsp;<span
+                          class="font-uni-chu text-[19px] md:text-[42px]"
+                          style="color: rgb(93, 106, 87)"
+                        >
+                          Nguyễn Thị Hậu
+                        </span>
+                      </span>
                     </div>
                   </div>
                   <div
@@ -474,7 +500,7 @@
                     </div>
                   </div>
                 </section>
-                
+
                 <footer
                   class="relative mt-6 md:mt-8 flex flex-col items-center gap-3 px-6 md:px-10 pt-6 md:pt-8 pb-3 text-center z-10"
                 >
