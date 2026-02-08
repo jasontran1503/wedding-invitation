@@ -3,13 +3,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./fonts/font-face.css" />
     <link rel="icon" type="image/png" href="./icon.png" />
+    <link rel="preload" href="./fonts/font-face.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="./fonts/font-face.css">
+    </noscript>
     <link rel="preload" as="image" href="./images/MIA00075.JPG">
     <link rel="preload" as="image" href="./images/MIA08581.JPG">
     <link rel="preload" as="image" href="./images/MIA08784.JPG">
     <link rel="preload" as="image" href="./images/MIA09343.JPG">
     <link rel="preload" as="image" href="./images/MIA09798.JPG">
+    <link rel="stylesheet" href="./fonts/font-face.css" />
     <style>
       :root {
         --accent: rgb(93, 106, 87);
