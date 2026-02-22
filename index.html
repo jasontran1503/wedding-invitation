@@ -148,10 +148,39 @@
                 </header>
 
                 <br />
-                <audio autoplay loop controls style="display: none">
-                  <source src="./audios/I Do.mp3" type="audio/mpeg" />
-                  Trình duyệt của bạn không hỗ trợ thẻ audio.
-                </audio>
+                <div>
+                  <audio
+                    autoplay
+                    loop
+                    controls
+                    style="display: none"
+                    id="myAudio"
+                  >
+                    <source src="./audios/I Do.mp3" type="audio/mpeg" />
+                  </audio>
+
+                  <button
+                    id="musicBtn"
+                    class="fixed top-3 right-3 z-50 w-9 h-9 bg-white rounded-full shadow-xl flex items-center justify-center text-rose-500 transition-all hover:scale-110 active:scale-95"
+                  >
+                    <svg
+                      id="musicIcon"
+                      class="h-5 w-5 animate-spin"
+                      style="animation-duration: 3s; color: rgb(105, 122, 98)"
+                      xmlns="http://www.w3.org"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
+                      />
+                    </svg>
+                  </button>
+                </div>
 
                 <br />
                 <br />
@@ -576,6 +605,31 @@
       });
       window.addEventListener("load", function () {
         autoScroll();
+      });
+    </script>
+    <script>
+      const btn = document.getElementById("musicBtn");
+      const icon = document.getElementById("musicIcon");
+      const audio = document.getElementById("myAudio");
+
+      let isPlaying = true;
+
+      window.addEventListener("load", () => {
+        audio.play().catch((error) => {
+          icon.classList.remove("animate-spin");
+          isPlaying = false;
+        });
+      });
+
+      btn.addEventListener("click", () => {
+        if (isPlaying) {
+          audio.pause();
+          icon.classList.remove("animate-spin");
+        } else {
+          audio.play();
+          icon.classList.add("animate-spin");
+        }
+        isPlaying = !isPlaying;
       });
     </script>
   </body>
