@@ -783,6 +783,7 @@
         </main>
       </div>
     </div>
+
     <script>
       let stopScroll = false;
       function autoScroll() {
@@ -795,39 +796,49 @@
         window.scrollBy(0, 2);
         setTimeout(autoScroll, 30);
       }
-      window.addEventListener("wheel", function () {
+
+      window.addEventListener("wheel", () => {
         stopScroll = true;
       });
-      window.addEventListener("touchstart", function () {
-        stopScroll = true;
-      });
-      window.addEventListener("load", function () {
-        autoScroll();
-      });
-    </script>
-    <script>
+      window.addEventListener(
+        "touchstart",
+        () => {
+          stopScroll = true;
+        },
+        { passive: true },
+      );
+
+      window.addEventListener("load", autoScroll);
+
       const btn = document.getElementById("musicBtn");
       const icon = document.getElementById("musicIcon");
       const audio = document.getElementById("myAudio");
 
-      let isPlaying = true;
+      function playMusic() {
+        audio
+          .play()
+          .then(() => {
+            icon.classList.add("animate-spin");
+            document.removeEventListener("touchstart", playMusic);
+            document.removeEventListener("click", playMusic);
+          })
+          .catch((error) => {
+            console.log("Chờ tương tác để phát nhạc...");
+          });
+      }
 
-      window.addEventListener("load", () => {
-        audio.play().catch((error) => {
-          icon.classList.remove("animate-spin");
-          isPlaying = false;
-        });
-      });
+      document.addEventListener("touchstart", playMusic, { once: true });
+      document.addEventListener("click", playMusic, { once: true });
 
-      btn.addEventListener("click", () => {
-        if (isPlaying) {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (!audio.paused) {
           audio.pause();
           icon.classList.remove("animate-spin");
         } else {
           audio.play();
           icon.classList.add("animate-spin");
         }
-        isPlaying = !isPlaying;
       });
     </script>
   </body>
