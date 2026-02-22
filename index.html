@@ -54,6 +54,21 @@
         background-color: var(--bg-accent);
         color: var(--muted);
       }
+
+      @keyframes fade-in-up {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in-up {
+        animation: fade-in-up 0.8s ease-out;
+      }
     </style>
     <title>Xuân Sơn & Nguyễn Hậu - Lời mời đám cưới</title>
     <meta
@@ -78,8 +93,77 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
 
-  <body class="__variable_0e81cb __variable_3fd7ce font-sans">
-    <div class="cursor-pointer">
+  <body class="font-sans">
+    <!-- Mở thiệp -->
+    <div
+      id="wedding-overlay"
+      class="fixed inset-0 z-[9999] flex items-center justify-center bg-[#e9f0e9] transition-all duration-1000"
+    >
+      <div
+        class="bg-white w-[320px] rounded-2xl shadow-2xl overflow-hidden text-center pb-10 animate-fade-in-up"
+      >
+        <div
+          class="bg-[#3d4e3d] h-28 relative flex items-center justify-center"
+          style="clip-path: polygon(0 0, 100% 0, 100% 25%, 50% 100%, 0 25%)"
+        >
+          <div
+            class="text-white text-3xl rounded-full w-[30px] h-[30px] border-[1.5px] border-solid flex justify-center items-center p-[1.2rem] mt-4"
+          >
+            ♥
+          </div>
+        </div>
+
+        <div class="px-6 mt-6">
+          <h1 class="font-uni-chu text-2xl text-[#3d4e3d] font-bold">
+            Tuấn & Ngọc
+          </h1>
+          <div class="flex items-center justify-center gap-3 mb-2">
+            <div
+              style="
+                background: linear-gradient(to right, transparent, #697a62);
+              "
+              class="w-10 h-px"
+            ></div>
+            <span style="color: #697a62; opacity: 0.7" class="text-sm">❦</span>
+            <div
+              style="background: linear-gradient(to left, transparent, #697a62)"
+              class="w-10 h-px"
+            ></div>
+          </div>
+          <p class="text-gray-500 text-[10px] tracking-[0.3em] uppercase mb-4">
+            1 Tháng 2, 2026
+          </p>
+          <p class="text-[#3d4e3d] italic text-sm mb-8">Thân Mời</p>
+
+          <button
+            id="open-btn"
+            class="cursor-pointer flex items-center justify-center gap-2 w-full py-3 bg-[#4a5d4a] text-white rounded-full shadow-lg hover:bg-[#3d4e3d] transition-all transform active:scale-95"
+          >
+            <svg
+              xmlns="http://www.w3.org"
+              class="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              />
+            </svg>
+            <span class="text-sm font-medium tracking-wide">Mở thiệp</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nội dung -->
+    <div
+      id="main-wedding-content"
+      class="hidden opacity-0 transition-opacity duration-1000"
+    >
       <div class="min-h-screen bg-gray-50">
         <main class="flex justify-center items-center min-h-screen bg-gray-50">
           <div class="w-full max-w-4xl">
@@ -587,7 +671,6 @@
                         >
                       </div>
 
-                      <!-- Trang trí hạt bụi rơi (giống ảnh gốc nhưng màu xanh) -->
                       <div
                         class="absolute top-4 right-10 w-2 h-1.5 bg-[rgb(105,122,98)]/30 rotate-12 rounded-full"
                       ></div>
@@ -783,52 +866,121 @@
         </main>
       </div>
     </div>
+
     <script>
-      let stopScroll = false;
-      function autoScroll() {
+      (function () {
+        function createFlower() {
+          const flower = document.createElement("div");
+          flower.innerHTML = "✿";
+
+          const sizes = ["14px", "18px", "22px", "26px"];
+          const randomSize = sizes[Math.floor(Math.random() * sizes.length)];
+
+          Object.assign(flower.style, {
+            position: "fixed",
+            top: "-20px",
+            left: Math.random() * 100 + "vw",
+            fontSize: randomSize,
+            color: "#ffb7c5",
+            opacity: Math.random() * 0.6 + 0.4,
+            zIndex: "999999",
+            pointerEvents: "none",
+            userSelect: "none",
+            transition: "transform 0s linear",
+            lineHeight: "1",
+            display: "block",
+            visibility: "visible",
+          });
+
+          document.body.appendChild(flower);
+
+          const duration = Math.random() * 6000 + 8000;
+          const drift = Math.random() * 200 - 100;
+
+          flower.animate(
+            [
+              {
+                transform: `translateY(0) rotate(0deg) translateX(0)`,
+                opacity: 0,
+              },
+              { opacity: 1, offset: 0.1 },
+              {
+                transform: `translateY(110vh) rotate(360deg) translateX(${drift}px)`,
+                opacity: 0,
+              },
+            ],
+            {
+              duration: duration,
+              easing: "linear",
+              fill: "forwards",
+            },
+          );
+
+          setTimeout(() => {
+            flower.remove();
+          }, duration);
+        }
+
+        setInterval(createFlower, 500);
+      })();
+    </script>
+
+    <script>
+      const overlay = document.getElementById("wedding-overlay");
+      const mainContent = document.getElementById("main-wedding-content");
+      const openBtn = document.getElementById("open-btn");
+      const audio = document.getElementById("myAudio");
+      const musicIcon = document.getElementById("musicIcon");
+
+      let isAutoScrolling = false;
+      let scrollRequest;
+
+      function startAutoScroll() {
+        if (!isAutoScrolling) return;
+        window.scrollBy(0, 1.2);
         if (
-          stopScroll ||
-          window.scrollY >= document.body.scrollHeight - window.innerHeight
+          window.innerHeight + window.pageYOffset >=
+          document.body.offsetHeight
         ) {
+          isAutoScrolling = false;
           return;
         }
-        window.scrollBy(0, 2);
-        setTimeout(autoScroll, 30);
+        scrollRequest = requestAnimationFrame(startAutoScroll);
       }
-      window.addEventListener("wheel", function () {
-        stopScroll = true;
-      });
-      window.addEventListener("touchstart", function () {
-        stopScroll = true;
-      });
-      window.addEventListener("load", function () {
-        autoScroll();
-      });
-    </script>
-    <script>
-      const btn = document.getElementById("musicBtn");
-      const icon = document.getElementById("musicIcon");
-      const audio = document.getElementById("myAudio");
 
-      let isPlaying = true;
+      openBtn.addEventListener("click", () => {
+        overlay.style.opacity = "0";
+        overlay.style.pointerEvents = "none";
 
-      window.addEventListener("load", () => {
-        audio.play().catch((error) => {
-          icon.classList.remove("animate-spin");
-          isPlaying = false;
-        });
+        mainContent.classList.remove("hidden");
+        setTimeout(() => {
+          mainContent.classList.add("opacity-100");
+        }, 50);
+
+        audio.play().catch((e) => console.log("Audio Play Error"));
+        if (musicIcon) musicIcon.classList.add("animate-spin");
+
+        setTimeout(() => {
+          isAutoScrolling = true;
+          startAutoScroll();
+          window.dispatchEvent(new Event("resize"));
+        }, 1500);
       });
 
-      btn.addEventListener("click", () => {
-        if (isPlaying) {
-          audio.pause();
-          icon.classList.remove("animate-spin");
-        } else {
-          audio.play();
-          icon.classList.add("animate-spin");
-        }
-        isPlaying = !isPlaying;
+      window.addEventListener("wheel", () => {
+        isAutoScrolling = false;
+        cancelAnimationFrame(scrollRequest);
       });
+      window.addEventListener(
+        "touchstart",
+        (e) => {
+          if (e.target.id !== "musicBtn") {
+            isAutoScrolling = false;
+            cancelAnimationFrame(scrollRequest);
+          }
+        },
+        { passive: true },
+      );
     </script>
   </body>
 </html>
