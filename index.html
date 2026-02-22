@@ -56,8 +56,14 @@
       }
     </style>
     <title>Xuân Sơn & Nguyễn Hậu - Lời mời đám cưới</title>
-    <meta property="og:title" content="Xuân Sơn & Nguyễn Hậu - Lời mời đám cưới" />
-    <meta property="og:description" content="Trân trọng kính mời quý vị tới dự lễ thành hôn cùng gia đình chúng tôi." />
+    <meta
+      property="og:title"
+      content="Xuân Sơn & Nguyễn Hậu - Lời mời đám cưới"
+    />
+    <meta
+      property="og:description"
+      content="Ngày vui của chúng mình, hân hoan đón chào bạn đến chung vui"
+    />
     <meta property="og:image" content="./images/MIA09798.JPG" />
     <meta property="og:type" content="website" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -142,21 +148,32 @@
                 </header>
 
                 <br />
-                <br />
+                <audio autoplay loop controls style="display: none">
+                  <source src="./audios/I Do.mp3" type="audio/mpeg" />
+                  Trình duyệt của bạn không hỗ trợ thẻ audio.
+                </audio>
 
+                <br />
+                <br />
                 <section
                   class="relative flex flex-col gap-16 md:gap-20 px-3 md:px-6 pb-24 md:pb-32 z-10"
                 ></section>
 
                 <section
+                  id="invitation"
                   class="relative flex flex-col gap-10 md:gap-20 px-3 md:px-6 pb-24 md:pb-32 z-10"
                 >
                   <div
-                    class="relative text-center font-serif text-[14px] md:text-[18px] serif accent"
+                    style="
+                      color: rgb(105, 122, 98);
+                      font-family:
+                        Baskerville, &quot;Times New Roman&quot;, serif;
+                    "
+                    class="relative text-center text-[20px] md:text-[25px] italic accent"
                   >
-                    <span>TRÂN TRỌNG KÍNH MỜI</span>
-                    <hr class="my-4" />
-                    <span>tới dự LỄ THÀNH HÔN cùng gia đình chúng tôi</span>
+                    <span>Ngày vui của chúng mình,</span>
+                    <br />
+                    <span>hân hoan đón chào bạn đến chung vui</span>
                   </div>
                   <div class="grid grid-cols-2 gap-3 md:gap-4">
                     <div
@@ -245,7 +262,7 @@
                         "
                         ><span class="text-[10px] md:text-[20px]">Ông</span
                         >&nbsp;<span class="text-[11px] md:text-[23px]"
-                          >Hồng</span
+                          >Nguyễn Văn Hồng</span
                         ></span
                       >
                       <span
@@ -257,7 +274,7 @@
                         "
                         ><span class="text-[10px] md:text-[20px]">Bà</span
                         >&nbsp;<span class="text-[11px] md:text-[23px]"
-                          >Nghiệp</span
+                          >Trần Thị Nghiệp</span
                         ></span
                       >
                       <span
@@ -401,7 +418,8 @@
                           Baskerville, &quot;Times New Roman&quot;, serif;
                       "
                     >
-                      Như Quỳnh, Hưng Yên
+                      Số 13, ngõ 125, tổ dân cư số 3, phố Như Quỳnh, Xã Như
+                      Quỳnh, Tỉnh Hưng Yên
                     </div>
                     <h5
                       class="font-normal text-[15px] md:text-[15px] mt-4"
@@ -423,7 +441,7 @@
                           Baskerville, &quot;Times New Roman&quot;, serif;
                       "
                     >
-                      Như Quỳnh, Hưng Yên
+                      Thôn Trung Lê, Xã Như Quỳnh, Tỉnh Hưng Yên
                     </div>
                   </div>
                 </section>
@@ -522,7 +540,7 @@
                     class="rounded-2xl px-6 md:px-8 py-4 md:py-5 shadow-sm max-w-full md:max-w-[600px] bg-accent"
                   >
                     <span
-                      class="text-sm md:text-lg leading-relaxed"
+                      class="text-sm md:text-lg leading-relaxed italic"
                       style="
                         color: rgb(93, 106, 87);
                         font-family:
@@ -538,5 +556,27 @@
         </main>
       </div>
     </div>
+    <script>
+      let stopScroll = false;
+      function autoScroll() {
+        if (
+          stopScroll ||
+          window.scrollY >= document.body.scrollHeight - window.innerHeight
+        ) {
+          return;
+        }
+        window.scrollBy(0, 2);
+        setTimeout(autoScroll, 30);
+      }
+      window.addEventListener("wheel", function () {
+        stopScroll = true;
+      });
+      window.addEventListener("touchstart", function () {
+        stopScroll = true;
+      });
+      window.addEventListener("load", function () {
+        autoScroll();
+      });
+    </script>
   </body>
 </html>
