@@ -119,15 +119,11 @@
           </h1>
           <div class="flex items-center justify-center gap-3 mb-2">
             <div
-              style="
-                background: linear-gradient(to right, transparent, #697a62);
-              "
-              class="w-10 h-px"
+              class="w-10 h-px bg-gradient-to-r from-transparent to-[#697a62]"
             ></div>
-            <span style="color: #697a62; opacity: 0.7" class="text-sm">❦</span>
+            <span class="text-sm text-[#697a62]/70">❦</span>
             <div
-              style="background: linear-gradient(to left, transparent, #697a62)"
-              class="w-10 h-px"
+              class="w-10 h-px bg-gradient-to-l from-transparent to-[#697a62]"
             ></div>
           </div>
           <p
@@ -171,8 +167,6 @@
           <div class="w-full max-w-4xl">
             <div
               class="relative w-full bg-white overflow-hidden overflow-x-hidden"
-              data-testid="nature-template"
-              style="background-color: rgb(255, 255, 255)"
             >
               <div
                 class="absolute top-0 left-1/2 -translate-x-1/2 pointer-events-none opacity-70 z-[1]"
@@ -256,12 +250,12 @@
 
                   <button
                     id="musicBtn"
-                    class="fixed top-3 right-3 z-50 w-9 h-9 bg-white rounded-full shadow-xl flex items-center justify-center text-rose-500 transition-all hover:scale-110 active:scale-95"
+                    class="fixed top-3 right-3 z-50 w-9 h-9 bg-white rounded-full shadow-xl flex items-center justify-center text-rose-500 transition-all hover:scale-110 active:scale-95 cursor-pointer"
                   >
                     <svg
                       id="musicIcon"
-                      class="h-5 w-5 animate-spin"
-                      style="animation-duration: 3s; color: rgb(105, 122, 98)"
+                      class="h-5 w-5 animate-spin text-[rgb(105,122,98)]"
+                      style="animation-duration: 3s"
                       xmlns="http://www.w3.org"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -288,12 +282,7 @@
                   class="relative flex flex-col gap-10 md:gap-20 px-3 md:px-6 pb-24 md:pb-32 z-10"
                 >
                   <div
-                    style="
-                      color: rgb(105, 122, 98);
-                      font-family:
-                        Baskerville, &quot;Times New Roman&quot;, serif;
-                    "
-                    class="relative text-center text-[20px] md:text-[25px] italic accent"
+                    class="relative text-center text-[20px] md:text-[25px] italic accent text-[#697a62] font-['Baskerville','Times_New_Roman',serif]"
                   >
                     <span>Ngày vui của chúng mình,</span>
                     <br />
@@ -301,31 +290,21 @@
                   </div>
                   <div class="grid grid-cols-2 gap-3 md:gap-4">
                     <div
-                      class="group relative cursor-pointer overflow-hidden rounded-xl border bg-[#bdcdc1]/20"
-                      style="
-                        border-color: rgb(189, 205, 193);
-                        aspect-ratio: 0.9;
-                      "
+                      class="group relative cursor-pointer overflow-hidden rounded-xl border bg-[#bdcdc1]/20 border-[rgb(189,205,193)] aspect-[0.9]"
                     >
                       <img
                         alt="Ảnh chú rể"
-                        class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03]"
+                        class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03] object-center"
                         src="./images/MIA08867.JPG"
-                        style="object-position: 50% 50%"
                       />
                     </div>
                     <div
-                      class="group relative cursor-pointer overflow-hidden rounded-xl border bg-[#bdcdc1]/20"
-                      style="
-                        border-color: rgb(189, 205, 193);
-                        aspect-ratio: 0.9;
-                      "
+                      class="group relative cursor-pointer overflow-hidden rounded-xl border bg-[#bdcdc1]/20 border-[rgb(189,205,193)] aspect-[0.9]"
                     >
                       <img
                         alt="Ảnh cô dâu"
-                        class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03]"
+                        class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03] object-center"
                         src="./images/MIA08265.JPG"
-                        style="object-position: 50% 50%"
                       />
                     </div>
                   </div>
@@ -335,41 +314,25 @@
                     <div class="flex flex-col gap-1.5">
                       <span style="color: rgb(105, 122, 98)">Nhà trai</span>
                       <span
-                        class="whitespace-pre-line"
-                        style="
-                          color: rgb(105, 122, 98);
-                          font-family:
-                            Baskerville, &quot;Times New Roman&quot;, serif;
-                        "
+                        class="whitespace-pre-line text-[#697a62] font-['Baskerville','Times_New_Roman',serif]"
                         ><span class="text-[10px] md:text-[20px]">Ông</span
                         >&nbsp;<span class="text-[11px] md:text-[23px]"
                           >Trần Văn Lâm</span
                         ></span
                       >
                       <span
-                        class="whitespace-pre-line"
-                        style="
-                          color: rgb(105, 122, 98);
-                          font-family:
-                            Baskerville, &quot;Times New Roman&quot;, serif;
-                        "
+                        class="whitespace-pre-line text-[#697a62] font-['Baskerville','Times_New_Roman',serif]"
                         ><span class="text-[10px] md:text-[20px]">Bà</span
                         >&nbsp;<span class="text-[11px] md:text-[23px]"
                           >Nguyễn Thị Thanh Xuân</span
                         ></span
                       >
                       <span
-                        class="whitespace-pre-line"
-                        style="
-                          color: rgb(105, 122, 98);
-                          font-family:
-                            Baskerville, &quot;Times New Roman&quot;, serif;
-                        "
+                        class="whitespace-pre-line text-[#697a62] font-['Baskerville','Times_New_Roman',serif]"
                       >
                         <span class="text-[10px] md:text-[20px]">Chú rể</span
                         >&nbsp;<span
-                          class="font-uni-chu text-[19px] md:text-[42px]"
-                          style="color: rgb(93, 106, 87)"
+                          class="font-uni-chu text-[19px] md:text-[42px] text-[#5d6a57]"
                         >
                           Trần Xuân Sơn
                         </span>
@@ -378,41 +341,25 @@
                     <div class="flex flex-col gap-1.5">
                       <span style="color: rgb(105, 122, 98)">Nhà gái</span>
                       <span
-                        class="whitespace-pre-line"
-                        style="
-                          color: rgb(105, 122, 98);
-                          font-family:
-                            Baskerville, &quot;Times New Roman&quot;, serif;
-                        "
+                        class="whitespace-pre-line text-[#697a62] font-['Baskerville','Times_New_Roman',serif]"
                         ><span class="text-[10px] md:text-[20px]">Ông</span
                         >&nbsp;<span class="text-[11px] md:text-[23px]"
                           >Nguyễn Văn Hồng</span
                         ></span
                       >
                       <span
-                        class="whitespace-pre-line"
-                        style="
-                          color: rgb(105, 122, 98);
-                          font-family:
-                            Baskerville, &quot;Times New Roman&quot;, serif;
-                        "
+                        class="whitespace-pre-line text-[#697a62] font-['Baskerville','Times_New_Roman',serif]"
                         ><span class="text-[10px] md:text-[20px]">Bà</span
                         >&nbsp;<span class="text-[11px] md:text-[23px]"
                           >Trần Thị Nghiệp</span
                         ></span
                       >
                       <span
-                        class="whitespace-pre-line"
-                        style="
-                          color: rgb(105, 122, 98);
-                          font-family:
-                            Baskerville, &quot;Times New Roman&quot;, serif;
-                        "
+                        class="whitespace-pre-line text-[#697a62] font-['Baskerville','Times_New_Roman',serif]"
                       >
                         <span class="text-[10px] md:text-[20px]">Cô dâu</span
                         >&nbsp;<span
-                          class="font-uni-chu text-[19px] md:text-[42px]"
-                          style="color: rgb(93, 106, 87)"
+                          class="font-uni-chu text-[19px] md:text-[42px] text-[#5d6a57]"
                         >
                           Nguyễn Thị Hậu
                         </span>
@@ -420,87 +367,43 @@
                     </div>
                   </div>
                   <div
-                    class="relative flex flex-col items-center gap-4 md:gap-5 text-center"
-                    style="
-                      font-family:
-                        Baskerville, &quot;Times New Roman&quot;, serif;
-                    "
+                    class="relative flex flex-col items-center gap-4 md:gap-5 text-center font-['Baskerville','Times_New_Roman',serif]"
                   >
                     <h3
-                      class="font-normal uppercase text-[20px] md:text-[26px]"
-                      style="
-                        color: rgb(93, 106, 87);
-                        font-family:
-                          Baskerville, &quot;Times New Roman&quot;, serif;
-                        letter-spacing: 0.05em;
-                      "
+                      class="font-normal uppercase text-[20px] md:text-[26px] text-[#5d6a57] font-['Baskerville','Times_New_Roman',serif] tracking-[0.05em]"
                     >
                       TIỆC CƯỚI DIỄN RA VÀO LÚC
                     </h3>
                     <div
-                      class="text-[20px] md:text-[30px]"
-                      style="
-                        color: rgb(93, 106, 87);
-                        font-family:
-                          Baskerville, &quot;Times New Roman&quot;, serif;
-                      "
+                      class="text-[20px] md:text-[30px] text-[#5d6a57] font-['Baskerville','Times_New_Roman',serif]"
                     >
                       10:00
                     </div>
-                    <div
-                      class="flex items-center gap-6"
-                      style="color: rgb(93, 106, 87)"
-                    >
+                    <div class="flex items-center gap-6 text-[#5d6a57]">
                       <span
-                        class="text-[12px] md:text-[16px]"
-                        style="
-                          font-family:
-                            Baskerville, &quot;Times New Roman&quot;, serif;
-                        "
+                        class="text-[12px] md:text-[16px] font-['Baskerville','Times_New_Roman',serif]"
                         >CHỦ NHẬT</span
                       >
-                      <div
-                        class="w-[2px] h-6 md:h-8"
-                        style="background-color: rgb(93, 106, 87)"
-                      ></div>
+                      <div class="w-[2px] h-6 md:h-8 bg-[rgb(93,106,87)]"></div>
                       <span
-                        class="text-[30px] md:text-[40px]"
-                        style="
-                          font-family:
-                            Baskerville, &quot;Times New Roman&quot;, serif;
-                        "
-                        >22</span
+                        class="text-[30px] md:text-[40px] font-['Baskerville','Times_New_Roman',serif]"
                       >
-                      <div
-                        class="w-[2px] h-6 md:h-8"
-                        style="background-color: rgb(93, 106, 87)"
-                      ></div>
+                        22</span
+                      >
+                      <div class="w-[2px] h-6 md:h-8 bg-[rgb(93,106,87)]"></div>
                       <span
-                        class="text-[12px] md:text-[16px]"
-                        style="
-                          font-family:
-                            Baskerville, &quot;Times New Roman&quot;, serif;
-                        "
-                        >THÁNG 03</span
+                        class="text-[12px] md:text-[16px] font-['Baskerville','Times_New_Roman',serif]"
+                      >
+                        THÁNG 03</span
                       >
                     </div>
                     <div
-                      class="text-[18px] md:text-[24px]"
-                      style="
-                        color: rgb(93, 106, 87);
-                        font-family:
-                          Baskerville, &quot;Times New Roman&quot;, serif;
-                      "
+                      class="text-[18px] md:text-[24px] font-['Baskerville','Times_New_Roman',serif] text-[#5d6a57]"
                     >
                       2026
                     </div>
                     <div
-                      class="text-xs md:text-base uppercase"
-                      style="
-                        color: rgb(105, 122, 98);
-                        font-family:
-                          Baskerville, &quot;Times New Roman&quot;, serif;
-                      "
+                      class="text-xs md:text-base uppercase text-[#697a62] font-['Baskerville','Times_New_Roman',serif]"
                     >
                       (Tức ngày 04 tháng 02 năm Bính Ngọ)
                     </div>
@@ -700,61 +603,82 @@
                 >
                   <div class="relative text-center">
                     <h3
-                      class="font-normal uppercase text-[20px] md:text-[26px]"
-                      style="
-                        color: rgb(93, 106, 87);
-                        font-family:
-                          Baskerville, &quot;Times New Roman&quot;, serif;
-                        letter-spacing: 0.05em;
-                      "
+                      class="font-normal uppercase text-[20px] md:text-[26px] text-[#5d6a57] font-['Baskerville','Times_New_Roman',serif] tracking-[0.05em]"
                     >
                       TIỆC CƯỚI TỔ CHỨC TẠI
                     </h3>
                     <h5
-                      class="font-normal text-[15px] md:text-[15px] mt-4"
-                      style="
-                        color: rgb(93, 106, 87);
-                        font-family:
-                          Baskerville, &quot;Times New Roman&quot;, serif;
-                        letter-spacing: 0.05em;
-                      "
+                      class="font-normal text-[15px] md:text-[15px] mt-4 text-[#5d6a57] font-['Baskerville','Times_New_Roman',serif] tracking-[0.05em]"
                     >
                       Tư gia nhà trai
                     </h5>
                     <div
-                      class="mx-auto max-w-sm md:max-w-[600px] rounded-full px-4 md:px-6 py-2 md:py-3 text-sm md:text-base"
-                      style="
-                        background-color: rgb(189, 205, 193);
-                        color: rgb(105, 122, 98);
-                        font-family:
-                          Baskerville, &quot;Times New Roman&quot;, serif;
-                      "
+                      class="mx-auto max-w-sm md:max-w-[600px] rounded-full px-4 md:px-6 py-2 md:py-3 text-sm md:text-base bg-[#bdcdc1] text-[#697a62] font-['Baskerville','Times_New_Roman',serif]"
                     >
                       Số 13, ngõ 125, tổ dân cư số 3, phố Như Quỳnh, Xã Như
                       Quỳnh, Tỉnh Hưng Yên
                     </div>
+                    <a
+                      href="https://maps.app.goo.gl/gLWTykvrHz57seEY8"
+                      target="_blank"
+                      class="flex items-center justify-center mt-1 mb-4 text-sm text-[rgb(105,122,98)] font-medium"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                        />
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                        />
+                      </svg>
+                      <span class="ml-1">Chỉ đường</span>
+                    </a>
+
                     <h5
-                      class="font-normal text-[15px] md:text-[15px] mt-4"
-                      style="
-                        color: rgb(93, 106, 87);
-                        font-family:
-                          Baskerville, &quot;Times New Roman&quot;, serif;
-                        letter-spacing: 0.05em;
-                      "
+                      class="font-normal text-[15px] md:text-[15px] mt-4 text-[#5d6a57] font-['Baskerville','Times_New_Roman',serif] tracking-[0.05em]"
                     >
                       Tư gia nhà gái
                     </h5>
                     <div
-                      class="mx-auto max-w-sm md:max-w-[600px] rounded-full px-4 md:px-6 py-2 md:py-3 text-sm md:text-base"
-                      style="
-                        background-color: rgb(189, 205, 193);
-                        color: rgb(105, 122, 98);
-                        font-family:
-                          Baskerville, &quot;Times New Roman&quot;, serif;
-                      "
+                      class="mx-auto max-w-sm md:max-w-[600px] rounded-full px-4 md:px-6 py-2 md:py-3 text-sm md:text-base bg-[#bdcdc1] text-[#697a62] font-['Baskerville','Times_New_Roman',serif]"
                     >
                       Thôn Trung Lê, Xã Như Quỳnh, Tỉnh Hưng Yên
                     </div>
+                    <a
+                      href="https://maps.app.goo.gl/wvDfKR7hbQVYJda38"
+                      target="_blank"
+                      class="flex items-center justify-center mt-1 mb-4 text-sm text-[rgb(105,122,98)] font-medium"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                        />
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                        />
+                      </svg>
+                      <span class="ml-1">Chỉ đường</span>
+                    </a>
                   </div>
                 </section>
 
@@ -769,76 +693,61 @@
                   <div class="mt-6 w-full max-w-[432px] md:max-w-[600px]">
                     <div class="grid grid-cols-3 gap-3 md:gap-4 mb-3">
                       <div
-                        class="group relative aspect-square cursor-pointer overflow-hidden rounded-xl border bg-[#bdcdc1]/20"
-                        style="border-color: rgb(189, 205, 193)"
+                        class="group relative aspect-square cursor-pointer overflow-hidden rounded-xl border bg-[#bdcdc1]/20 border-[rgb(189,205,193)]"
                       >
                         <img
                           alt="Ảnh cưới 1"
-                          class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03]"
+                          class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03] object-center"
                           src="./images/MIA09798.JPG"
-                          style="object-position: 50% 50%"
                         />
                       </div>
                       <div
-                        class="group relative aspect-square cursor-pointer overflow-hidden rounded-xl border bg-[#bdcdc1]/20"
-                        style="border-color: rgb(189, 205, 193)"
+                        class="group relative aspect-square cursor-pointer overflow-hidden rounded-xl border bg-[#bdcdc1]/20 border-[rgb(189,205,193)]"
                       >
                         <img
                           alt="Ảnh cưới 2"
-                          class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03]"
+                          class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03] object-center"
                           src="./images/MIA09343.JPG"
-                          style="object-position: 50% 50%"
                         />
                       </div>
                       <div
-                        class="group relative aspect-square cursor-pointer overflow-hidden rounded-xl border bg-[#bdcdc1]/20"
-                        style="border-color: rgb(189, 205, 193)"
+                        class="group relative aspect-square cursor-pointer overflow-hidden rounded-xl border bg-[#bdcdc1]/20 border-[rgb(189,205,193)]"
                       >
                         <img
                           alt="Ảnh cưới 3"
-                          class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03]"
+                          class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03] object-center"
                           src="./images/MIA00075.JPG"
-                          style="object-position: 50% 50%"
                         />
                       </div>
                     </div>
                     <div class="grid grid-cols-1 gap-3 md:gap-4 mb-3">
                       <div
-                        class="group relative cursor-pointer overflow-hidden rounded-xl border bg-[#bdcdc1]/20"
-                        style="
-                          border-color: rgb(189, 205, 193);
-                          aspect-ratio: 0.9;
-                        "
+                        class="group relative cursor-pointer overflow-hidden rounded-xl border bg-[#bdcdc1]/20 border-[rgb(189,205,193)] aspect-[0.9]"
                       >
                         <img
                           alt="Ảnh cưới 4"
-                          class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03]"
+                          class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03] object-center"
                           src="./images/MIA08581.JPG"
-                          style="object-position: 50% 50%"
                         />
                       </div>
                     </div>
                     <div class="grid grid-cols-2 gap-3 md:gap-4">
                       <div
-                        class="group relative aspect-square cursor-pointer overflow-hidden rounded-xl border bg-[#bdcdc1]/20"
-                        style="border-color: rgb(189, 205, 193)"
+                        class="group relative aspect-square cursor-pointer overflow-hidden rounded-xl border bg-[#bdcdc1]/20 border-[rgb(189,205,193)]"
                       >
                         <img
                           alt="Ảnh cưới 5"
-                          class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03]"
+                          class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03] object-center"
                           src="./images/MIA09229.JPG"
-                          style="object-position: 50% 50%"
                         />
                       </div>
                       <div
-                        class="group relative aspect-square cursor-pointer overflow-hidden rounded-xl border bg-[#bdcdc1]/20"
-                        style="border-color: rgb(189, 205, 193)"
+                        class="group relative aspect-square cursor-pointer overflow-hidden rounded-xl border bg-[#bdcdc1]/20 border-[rgb(189,205,193)]"
                       >
                         <img
                           alt="Ảnh cưới 6"
-                          class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03]"
+                          class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03] object-center"
                           src="./images/MIA08784.JPG"
-                          style="object-position: 50% 50%"
                         />
                       </div>
                     </div>
@@ -852,12 +761,7 @@
                     class="rounded-2xl px-6 md:px-8 py-4 md:py-5 shadow-sm max-w-full md:max-w-[600px] bg-accent"
                   >
                     <span
-                      class="text-sm md:text-lg leading-relaxed italic"
-                      style="
-                        color: rgb(93, 106, 87);
-                        font-family:
-                          Baskerville, &quot;Times New Roman&quot;, serif;
-                      "
+                      class="text-sm md:text-lg leading-relaxed italic text-[#5d6a57] font-['Baskerville','Times_New_Roman',serif]"
                       >Rất hân hạnh được đón tiếp!</span
                     >
                   </div>
