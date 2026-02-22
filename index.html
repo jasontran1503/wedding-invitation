@@ -130,13 +130,15 @@
               class="w-10 h-px"
             ></div>
           </div>
-          <p class="text-gray-500 text-[10px] tracking-[0.3em] uppercase mb-4 italic">
+          <p
+            class="text-gray-500 text-[10px] tracking-[0.3em] uppercase mb-4 italic"
+          >
             22 Tháng 3, 2026
           </p>
           <p class="text-[#3d4e3d] italic text-sm mb-8">Thân Mời</p>
 
           <button
-            id="open-btn"
+            id="open-envelope"
             class="cursor-pointer flex items-center justify-center gap-2 w-full py-3 bg-[#4a5d4a] text-white rounded-full shadow-lg hover:bg-[#3d4e3d] transition-all transform active:scale-95"
           >
             <svg
@@ -928,8 +930,10 @@
     <script>
       const overlay = document.getElementById("wedding-overlay");
       const mainContent = document.getElementById("main-wedding-content");
-      const openBtn = document.getElementById("open-btn");
+      const openEnvelope = document.getElementById("open-envelope");
+
       const audio = document.getElementById("myAudio");
+      const musicBtn = document.getElementById("musicBtn");
       const musicIcon = document.getElementById("musicIcon");
 
       let isAutoScrolling = false;
@@ -948,7 +952,21 @@
         scrollRequest = requestAnimationFrame(startAutoScroll);
       }
 
-      openBtn.addEventListener("click", () => {
+      function toggleMusic(e) {
+        if (e) e.stopPropagation();
+
+        if (audio.paused) {
+          audio.play();
+          musicIcon.classList.add("animate-spin");
+        } else {
+          audio.pause();
+          musicIcon.classList.remove("animate-spin");
+        }
+      }
+
+      musicBtn.addEventListener("click", toggleMusic);
+
+      openEnvelope.addEventListener("click", () => {
         overlay.style.opacity = "0";
         overlay.style.pointerEvents = "none";
 
